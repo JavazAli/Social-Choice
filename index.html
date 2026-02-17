@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>انتخاب اجتماعی</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="انتخاب اجتماعی">
+  <meta property="og:title" content="انتخاب اجتماعی">
+  <meta property="og:description" content="نظریه انتخاب اجتماعی: یک توهم دموکراتیک">
+  <meta property="og:url" content="https://javazali.github.io/Social-Choice/">
+  <meta property="og:image" content="https://javazali.github.io/Social-Choice/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="انتخاب اجتماعی">
+  <meta name="twitter:description" content="نظریه انتخاب اجتماعی: یک توهم دموکراتیک">
+  <meta name="twitter:image" content="https://javazali.github.io/Social-Choice/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/gs-pages.css">
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- ORIGINAL SCREENS (0-8)        -->
+  <!-- ============================= -->
+
+  <!-- Screen 0: Cover -->
+  <section class="screen active" id="screen-cover">
+    <div class="stage">
+      <div class="cover-wrap" id="coverWrap">
+        <div class="cover-deco">
+          <div class="deco-item tri parallax-layer" id="coverTri" aria-hidden="true">
+            <div class="float fast">
+              <svg viewBox="0 0 180 180">
+                <path d="M90 18 L160 150 L20 150 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="4"/>
+                <ellipse cx="70" cy="78" rx="18" ry="10" fill="var(--border)"/>
+                <ellipse cx="110" cy="78" rx="18" ry="10" fill="var(--border)"/>
+                <path d="M70 108 Q90 120 110 108" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="deco-item cir parallax-layer" id="coverCir" aria-hidden="true">
+            <div class="float slow">
+              <svg viewBox="0 0 180 180">
+                <circle cx="90" cy="90" r="65" fill="var(--cir)" stroke="var(--border)" stroke-width="4"/>
+                <circle cx="70" cy="80" r="10" fill="#fff"/>
+                <circle cx="110" cy="80" r="10" fill="#fff"/>
+                <circle cx="70" cy="80" r="5" fill="var(--border)"/>
+                <circle cx="110" cy="80" r="5" fill="var(--border)"/>
+                <path d="M60 110 Q90 135 120 110" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="deco-item sq parallax-layer" id="coverSq" aria-hidden="true">
+            <div class="float">
+              <svg viewBox="0 0 180 180">
+                <rect x="45" y="45" width="90" height="90" fill="var(--sq)" stroke="var(--border)" stroke-width="4"/>
+                <polygon points="90,64 84,78 96,78" fill="var(--border)"/>
+                <polygon points="84,78 96,78 94,116 86,116" fill="var(--border)"/>
+                <line x1="68" y1="86" x2="82" y2="86" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="98" y1="86" x2="112" y2="86" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="74" y1="108" x2="106" y2="108" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="parallax-layer" id="coverMainLayer">
+          <div class="card cover-main float" style="width:min(1500px, 100%);">
+            <div class="title-lg cover-title">
+              <span class="l1">نظریه انتخاب اجتماعی:</span>
+              <span class="l2">یک توهم دموکراتیک</span>
+            </div>
+            <div class="doodle">چرا ریاضی اجازه نمی‌دهد همیشه راضی باشیم؟</div>
+            <div style="margin-top:18px;">
+              <button class="btn" id="btnStart">شروع تجربه</button>
+            </div>
+          </div>
+          <div class="cover-actions">
+            <button class="dock-btn" id="btnContactCover" aria-label="ارتباط با ما (صفحه اول)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16v16H4z"/>
+                <path d="M4 6l8 6 8-6"/>
+              </svg>
+            </button>
+            <!-- Mod 3: Waveform SVG icon for sound -->
+            <button class="dock-btn" id="btnSoundCover" aria-label="موسیقی (صفحه اول)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round">
+                <g id="wavesCover">
+                  <line x1="4" y1="8" x2="4" y2="16"/>
+                  <line x1="8" y1="5" x2="8" y2="19"/>
+                  <line x1="12" y1="3" x2="12" y2="21"/>
+                  <line x1="16" y1="5" x2="16" y2="19"/>
+                  <line x1="20" y1="8" x2="20" y2="16"/>
+                </g>
+                <line x1="2" y1="2" x2="22" y2="22" id="muteXCover" style="display:none" stroke="var(--border)" stroke-width="2.5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 1 -->
+  <section class="screen" id="screen-intro">
+    <div class="stage">
+      <div class="stack">
+        <div class="card pad" style="width:min(980px,100%); text-align:center;">
+          <div class="title-md">به سرزمین دموکراسی خوش آمدید.</div>
+          <p class="muted">
+            جایی که شما -مردم- تصمیم می‌گیرید چه کسی رئیس باشد، یا حداقل این‌طور به نظر می‌رسد!
+          </p>
+        </div>
+        <div class="subtitle" style="text-align:center; font-weight:900; opacity:1; margin-top:2px;">
+          با کاندیداهای ما آشنا شوید.
+        </div>
+        <div class="candidates-row">
+          <div class="card cand-card">
+            <div class="float fast">
+              <svg width="130" height="130" viewBox="0 0 180 180" aria-hidden="true">
+                <path d="M90 18 L160 150 L20 150 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="4"/>
+                <ellipse cx="70" cy="78" rx="18" ry="10" fill="var(--border)"/>
+                <ellipse cx="110" cy="78" rx="18" ry="10" fill="var(--border)"/>
+                <path d="M70 108 Q90 120 110 108" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cand-name">آقای مثلث</div>
+            <div class="cand-desc">پوپولیست تندرو و عملگرا</div>
+          </div>
+          <div class="card cand-card">
+            <div class="float">
+              <svg width="130" height="130" viewBox="0 0 180 180" aria-hidden="true">
+                <circle cx="90" cy="90" r="65" fill="var(--cir)" stroke="var(--border)" stroke-width="4"/>
+                <circle cx="70" cy="80" r="10" fill="#fff"/>
+                <circle cx="110" cy="80" r="10" fill="#fff"/>
+                <circle cx="70" cy="80" r="5" fill="var(--border)"/>
+                <circle cx="110" cy="80" r="5" fill="var(--border)"/>
+                <path d="M60 110 Q90 135 120 110" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cand-name">خانم دایره</div>
+            <div class="cand-desc">سازش‌کار میانه‌رو و صلح‌طلب</div>
+          </div>
+          <div class="card cand-card">
+            <div class="float slow">
+              <svg width="130" height="130" viewBox="0 0 180 180" aria-hidden="true">
+                <rect x="45" y="45" width="90" height="90" fill="var(--sq)" stroke="var(--border)" stroke-width="4"/>
+                <polygon points="90,64 84,78 96,78" fill="var(--border)"/>
+                <polygon points="84,78 96,78 94,116 86,116" fill="var(--border)"/>
+                <line x1="68" y1="86" x2="82" y2="86" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="98" y1="86" x2="112" y2="86" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                <line x1="74" y1="108" x2="106" y2="108" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cand-name">جناب چارچوب</div>
+            <div class="cand-desc">بروکرات سنتی و محافظه‌کار</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <!-- Mod 5: Updated button text -->
+          <button class="btn" id="btnGoVote">همراه مردم در انتخابات شرکت کنید و به گزینه خود رای بدهید!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 2: Vote -->
+  <section class="screen" id="screen-vote">
+    <div class="stage">
+      <div class="ballot-card card float">
+        <div class="ballot-title">برگه رای شما</div>
+        <div class="ballot-sub">روی یک گزینه کلیک کنید</div>
+        <div class="ballot-options">
+          <div class="ballot-opt" data-vote="tri">
+            <strong>آقای مثلث</strong>
+            <svg width="40" height="40" viewBox="0 0 50 50" aria-hidden="true">
+              <path d="M25 6 L46 42 L4 42 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="ballot-opt" data-vote="cir">
+            <strong>خانم دایره</strong>
+            <svg width="40" height="40" viewBox="0 0 50 50" aria-hidden="true">
+              <circle cx="25" cy="25" r="18" fill="var(--cir)" stroke="var(--border)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="ballot-opt" data-vote="sq">
+            <strong>جناب چارچوب</strong>
+            <svg width="40" height="40" viewBox="0 0 50 50" aria-hidden="true">
+              <rect x="11" y="11" width="28" height="28" fill="var(--sq)" stroke="var(--border)" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 3: Counting -->
+  <section class="screen" id="screen-count">
+    <div class="stage">
+      <div class="card pad center float" style="width:min(520px,92vw);">
+        <svg class="gear" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 10l4 2 4-2 4 6-3 3 2 4 4 1v8l-4 1-2 4 3 3-4 6-4-2-4 2-4-2-4 2-4-6 3-3-2-4-4-1v-8l4-1 2-4-3-3 4-6 4 2 4-2z"
+                fill="none" stroke="var(--border)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="32" cy="32" r="7" fill="none" stroke="var(--border)" stroke-width="3"/>
+        </svg>
+        <div class="title-md" style="margin-bottom:6px;">در حال شمارش آرا…</div>
+        <p class="muted">کمی صبر کنید</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 4: Result -->
+  <section class="screen" id="screen-result">
+    <div class="stage">
+      <div class="result-box">
+        <div class="card result-text">
+          <h3>نتیجه اعلام شد!</h3>
+          <p id="resLine1" style="font-weight:800;"></p>
+          <p class="muted" style="margin-top:12px;">
+            احتمالا حدس می‌زنید که اکثریت به <strong id="majorityName">فلان</strong> رای دادند، ولی حتما دلایل قانع کننده ای برای حمایت از کاندیدای خود و توجیه رایتان در برابر اکثریت دارید.
+            همیشه فکر می‌کنیم مشکلات ناشی از رای‌ مردم به دلیل انتخاب اشتباه مردم یا نبودن کاندیداهای مناسب است.
+          </p>
+          <p class="muted">
+            اما تا به حال فکر کردید شاید مشکل از ساز و کارهای رای گیری و انتخاب اجتماعی باشد؟
+          </p>
+          <div style="margin-top:14px;">
+            <button class="btn" id="btnToCondorcet">ادامه: پارادوکس کندورسه</button>
+          </div>
+        </div>
+        <div class="card winner-panel">
+          <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="win-anim" id="winnerIcon"></div>
+          <div style="font-weight:900; font-size:18px;" id="winnerName"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condorcet 1 -->
+  <section class="screen" id="screen-cond1">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float">
+        <div class="title-md">پارادوکس کندورسه</div>
+        <div class="subtitle" style="font-weight:800;">مشکل سنگ کاغذ قیچی!</div>
+        <p class="muted" style="margin-top:10px;">
+          خب فرض کنید رای اولتان به دلایل سیاسی نامعلوم از انتخابات کناره گیری کرد.
+          بین دو گزینه باقیمانده به کدام رای می‌دهید؟
+        </p>
+      </div>
+      <div class="layout-3col" style="margin-top:8px;">
+        <div class="card mini-cand float slow" id="condLeft"></div>
+        <div class="card ballot-card float" id="condBallot">
+          <div class="ballot-title">برگه رای شما</div>
+          <div class="ballot-sub">یکی از دو گزینه را انتخاب کنید</div>
+          <div class="ballot-options" id="condOptions"></div>
+        </div>
+        <div class="card mini-cand float fast" id="condRight"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condorcet 2 -->
+  <section class="screen" id="screen-cond2">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float">
+        <div class="title-md">پارادوکس کندورسه</div>
+        <div class="subtitle" style="font-weight:800;">مشکل سنگ کاغذ قیچی!</div>
+      </div>
+      <div class="layout-2col" style="margin-top:8px;">
+        <div class="card pad float slow">
+          <div class="title-md" style="font-size:26px;">توضیح</div>
+          <p class="muted">
+            اگر اینبار <strong id="dynRemoved">کاندیدای دوم</strong> شما حذف شود، بدون این‌که از شما مجدد بپرسیم می‌دانیم که <strong id="dynPref1">کاندیدای اول</strong> را به <strong id="dynPref2">کاندیدای سوم</strong> ترجیح می‌دهید. خیلی منطقی است. نه؟
+          </p>
+          <p class="muted">
+            چون شما منطقی هستید و چون اقتصاددانان این را می‌دانند ، عقلانیت کنشگران را به پیش‌فرض مدل های خود در نظر می‌گیرند.
+            اگر شما <strong id="transA">الف</strong> را به <strong id="transB">ب</strong> ترجیح دهید و <strong id="transB2">ب</strong> را به <strong id="transC">ج</strong> ترجیح دهید،
+            آن‌گاه <strong id="transA2">الف</strong> را به <strong id="transC2">ج</strong> ترجیح می‌دهید.
+            به این خاصیت <strong>تعدی</strong> (<strong>Transitivity</strong>) ترجیحات می‌گوییم.
+          </p>
+          <div style="margin-top:14px;">
+            <button class="btn" id="btnCond2Next">اگر مجموعه‌ای از کنشگران عقلانی داشته باشیم، باز هم خروجی جمعی همین است؟</button>
+          </div>
+        </div>
+        <div class="card pref-card float fast" id="prefCard">
+          <div class="ballot-title" style="text-align:center;">برگه رای مطلوب شما</div>
+          <div class="ballot-sub" style="text-align:center;">ترتیب ترجیحات شما</div>
+          <div id="prefList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condorcet 3 -->
+  <section class="screen" id="screen-cond3">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="tickets-top" id="ticketsTop"></div>
+      <div class="card pad float" style="width:min(980px,100%); text-align:center;">
+        <p class="muted">
+          فرض کنید در دو رای دهنده دیگر با سلایق متفاوت از شما در جامعه هستند.
+          به نظر شما خروجی جمعی ترجیحات این جامعه منطقی است؟
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          بیایید دو به دو ترجیحات جامعه درباره کاندیداها را مقایسه کنیم.
+        </p>
+        <div style="margin-top:12px;">
+          <button class="btn" id="btnToCompare">شروع مقایسه دو به دو</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="screen" id="screen-compare">
+    <div class="bg-drift" aria-hidden="true">
+      <div class="blob" id="bgTri"><div class="spin"></div></div>
+      <div class="blob" id="bgCir"><div class="spin"></div></div>
+      <div class="blob" id="bgSq"><div class="spin"></div></div>
+    </div>
+    <div class="stage">
+      <div class="compare-wrap">
+        <div class="card header-card float" style="margin-bottom:0;">
+          <div class="title-md">مقایسه دو به دو</div>
+          <div class="subtitle">هر مرحله را اجرا کنید تا ببینیم اکثریت جامعه چه می‌گوید.</div>
+        </div>
+        <div class="card compare-box" id="compareBox">
+          <div style="text-align:center; margin-top:8px;">
+            <button class="btn small" id="compareBtn">شروع مقایسه</button>
+          </div>
+          <div id="compareLog" style="margin-top:14px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cycle -->
+  <section class="screen" id="screen-cycle">
+    <div class="stage">
+      <div class="layout-2col">
+        <div class="card pad float slow">
+          <div class="title-md" style="font-size:28px;">عجیب شد!</div>
+          <p class="muted">
+            هر کاندیدا توسط کاندیدای دیگر شکست می‌خورد. جامعه سردرگم است و نمی داند چه میخواهد! ترجیحاتش به دور افتاده!
+            به این چرخه یا پارادوکس کندورسه می‌گویند!
+          </p>
+          <p class="muted">
+            هر چند تک تک کنشگران ما ترجیحات عقلانی و متعدی در سطح فردی دارند، ولی خروجی انتخاب اجتماعی جامعه ترجیحات عقلانی و متعدی ندارد.
+          </p>
+          <div style="margin-top:14px;">
+            <!-- Mod 7: Changed button text to just "ادامه" -->
+            <button class="btn" id="btnEndCondorcet">ادامه</button>
+          </div>
+        </div>
+        <div class="card cycle-panel float fast">
+          <div class="cycle-title">چرخه کندورسه</div>
+          <!-- Mod 6: Cycle SVG with thinner arrowheads and no overlap -->
+          <svg class="cycle-svg" viewBox="0 0 520 420" aria-label="چرخه کندورسه">
+            <defs>
+              <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--border)"/>
+              </marker>
+            </defs>
+            <circle cx="260" cy="210" r="140" fill="none" stroke="rgba(45,45,45,.12)" stroke-width="3" stroke-dasharray="8 10"/>
+            <path d="M 275 72 A 140 140 0 0 1 376 270" fill="none" stroke="var(--border)" stroke-width="3.5" marker-end="url(#arrowhead)"/>
+            <path d="M 370 290 A 140 140 0 0 1 148 288" fill="none" stroke="var(--border)" stroke-width="3.5" marker-end="url(#arrowhead)"/>
+            <path d="M 144 272 A 140 140 0 0 1 248 72" fill="none" stroke="var(--border)" stroke-width="3.5" marker-end="url(#arrowhead)"/>
+            <g transform="translate(260 78)">
+              <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="5.4s" repeatCount="indefinite"/>
+                <g transform="translate(-55 -55)">
+                  <path d="M55 10 L102 95 L8 95 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="4"/>
+                  <ellipse cx="42" cy="52" rx="14" ry="8" fill="var(--border)"/>
+                  <ellipse cx="68" cy="52" rx="14" ry="8" fill="var(--border)"/>
+                  <path d="M42 74 Q55 86 68 74" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <text x="0" y="64" text-anchor="middle" font-size="16" font-weight="900" fill="var(--border)">آقای مثلث</text>
+              </g>
+            </g>
+            <g transform="translate(388 284)">
+              <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="4.8s" repeatCount="indefinite"/>
+                <g transform="translate(-55 -55)">
+                  <rect x="18" y="18" width="74" height="74" fill="var(--sq)" stroke="var(--border)" stroke-width="4"/>
+                  <polygon points="55,34 50,46 60,46" fill="var(--border)"/>
+                  <polygon points="50,46 60,46 58,78 52,78" fill="var(--border)"/>
+                  <line x1="34" y1="52" x2="48" y2="52" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="62" y1="52" x2="76" y2="52" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="40" y1="72" x2="70" y2="72" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <text x="0" y="64" text-anchor="middle" font-size="16" font-weight="900" fill="var(--border)">جناب چارچوب</text>
+              </g>
+            </g>
+            <g transform="translate(132 284)">
+              <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="6.6s" repeatCount="indefinite"/>
+                <g transform="translate(-55 -55)">
+                  <circle cx="55" cy="55" r="40" fill="var(--cir)" stroke="var(--border)" stroke-width="4"/>
+                  <circle cx="42" cy="50" r="9" fill="#fff"/>
+                  <circle cx="68" cy="50" r="9" fill="#fff"/>
+                  <circle cx="42" cy="50" r="4" fill="var(--border)"/>
+                  <circle cx="68" cy="50" r="4" fill="var(--border)"/>
+                  <path d="M38 70 Q55 88 72 70" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <text x="0" y="64" text-anchor="middle" font-size="16" font-weight="900" fill="var(--border)">خانم دایره</text>
+              </g>
+            </g>
+          </svg>
+          <div class="subtitle" style="text-align:center; opacity:.85;">ترجیحات جمعی به دور افتاده‌اند.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- GIBBARD-SATTERTHWAITE PAGES   -->
+  <!-- ============================= -->
+
+  <!-- GS Intro -->
+  <section class="screen" id="screen-gs-intro">
+    <div class="stage">
+      <div class="card gs-center-card float">
+        <div style="display:flex; justify-content:center; margin-bottom:14px;">
+          <svg width="70" height="70" viewBox="0 0 70 70" aria-hidden="true">
+            <circle cx="35" cy="35" r="30" fill="#fff9c4" stroke="var(--border)" stroke-width="3"/>
+            <path d="M25 28 Q35 20 45 28" fill="none" stroke="var(--border)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="25" cy="36" r="4" fill="var(--border)"/>
+            <circle cx="45" cy="36" r="4" fill="var(--border)"/>
+            <path d="M24 48 Q35 56 46 48" fill="none" stroke="var(--border)" stroke-width="3" stroke-linecap="round"/>
+            <text x="35" y="14" text-anchor="middle" font-size="16" font-weight="900" fill="var(--border)">?</text>
+          </svg>
+        </div>
+        <div class="title-md">تا به اینجا...</div>
+        <p class="muted" style="margin-top:10px;">
+          متوجه پیچیدگی و مشکلاتی که ممکن است یک رای‌گیری ساده و بدیهی داشته باشد شدیم.
+        </p>
+        <p style="font-weight:800; margin-top:14px; font-size:19px;">
+          بیایید ۲ قانون طلایی برای یک انتخابات عادلانه تعیین کنیم.
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          قوانینی که مکانیزم رای‌گیریمان منصفانه و عقلانی باشد.
+        </p>
+        <div style="margin-top:18px;">
+          <button class="btn" id="btnGsIntro">اما قبل از بررسی شروط، بیایید با کاندیدای جدید و عجیبمان آشنا شویم!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet new candidate intro -->
+  <section class="screen" id="screen-gs-meet">
+    <div class="stage">
+      <div class="card gs-center-card float">
+        <div style="display:flex; justify-content:center; margin-bottom:16px;">
+          <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+            <circle cx="40" cy="40" r="35" fill="none" stroke="var(--border)" stroke-width="3" stroke-dasharray="6 4"/>
+            <text x="40" y="48" text-anchor="middle" font-size="36" font-weight="900" fill="var(--border)">?</text>
+          </svg>
+        </div>
+        <div class="title-md">یک کاندیدای جدید و عجیب!</div>
+        <p class="muted" style="margin-top:10px;">
+          کسی که فکر می‌کند دموکراسی اصلا کار نمی‌کند...
+        </p>
+        <div style="margin-top:18px;">
+          <button class="btn" id="btnGsMeet">معرفی کاندیدا</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dictator character -->
+  <section class="screen" id="screen-gs-dictator">
+    <div class="stage">
+      <div class="stack" style="gap:14px;">
+        <div style="display:flex; justify-content:center;">
+          <div class="dict-float" id="dictCharacter"></div>
+        </div>
+        <div class="card pad" style="width:min(600px,95vw); text-align:center;">
+          <div class="title-md" style="color:var(--dict);">آقای دیکتاتور!</div>
+          <p style="font-weight:800; font-size:17px;">معتقد است دموکراسی کارا نیست!</p>
+          <p class="muted" style="margin-top:10px;">
+            از آنجایی که احتمالا شما و سایر مردم طرفدار دموکراسی هستید و دیکتاتوری مشکل دارید، فرض می‌کنیم آقای دیکتاتور شانس چندانی برای موفقیت ندارد و شما و سایر شهروندان سرزمین دموکراسی او را به عنوان گزینه چهارم و آخر خود در نظر می‌گیرید.
+          </p>
+          <div style="margin-top:14px;">
+            <button class="btn" id="btnGsDictator">بسیار خب! برگه رای به‌روز شده</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dictator added to ballot -->
+  <section class="screen" id="screen-gs-dict-ballot">
+    <div class="stage">
+      <div class="layout-2col" style="align-items:center;">
+        <div class="card pad float slow" style="text-align:center;">
+          <div class="ballot-title">برگه رای به‌روز شده شما</div>
+          <div class="ballot-sub">دیکتاتور به عنوان آخرین انتخاب اضافه شد</div>
+          <div id="dictBallotList"></div>
+        </div>
+        <div class="card pad float fast" style="text-align:center;">
+          <div style="display:flex; justify-content:center; margin-bottom:10px;">
+            <div class="dict-float">
+              <svg width="80" height="90" viewBox="0 0 150 160" aria-hidden="true">
+                <polygon points="75,35 120,55 110,110 40,110 30,55" fill="var(--dict)" stroke="var(--border)" stroke-width="4"/>
+                <polygon points="45,38 55,15 65,30 75,8 85,30 95,15 105,38" fill="#ffd54f" stroke="var(--border)" stroke-width="3"/>
+                <circle cx="60" cy="65" r="13" fill="#fff" stroke="var(--border)" stroke-width="3"/>
+                <circle cx="60" cy="65" r="6" fill="var(--border)"/>
+                <ellipse cx="92" cy="65" rx="10" ry="8" fill="var(--border)"/>
+                <path d="M62 80 Q75 76 88 80" fill="var(--border)"/>
+                <path d="M60 88 Q75 80 90 88" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <p class="muted">
+            آقای دیکتاتور در آخرین اولویت قرار گرفت. طبیعی است، مردم دموکراسی‌خواه هستند!
+          </p>
+          <div style="margin-top:16px;">
+            <button class="btn" id="btnGsDictBallot">اما حالا برویم سراغ شروط!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 8: NEW PAGE - Voting Machine Intro -->
+  <section class="screen" id="screen-gs-machine-intro">
+    <div class="stage">
+      <div class="stack" style="gap:14px; position:relative;">
+        <div style="display:flex; justify-content:center;" id="machineIntroDisplay"></div>
+        <div class="card pad float" style="width:min(700px,95vw); text-align:center;">
+          <div class="title-md" style="font-size:22px;">ماشین رای‌گیری</div>
+          <p class="muted" style="margin-top:8px;">
+            این ماشین مثل یک تابع ریاضی عمل می‌کند: ورودی آن برگه‌های رای مردم است و خروجی آن بر اساس مکانیزم رای‌گیری تعیین می‌شود.
+          </p>
+          <p class="muted" style="margin-top:6px;">
+            حالا بیایید ببینیم این ماشین چه شروطی باید داشته باشد تا عادلانه باشد.
+          </p>
+          <div style="margin-top:16px;">
+            <button class="btn" id="btnGsMachineIntro">بررسی شروط</button>
+          </div>
+        </div>
+        <!-- Mod 8: Dictator peeking from behind the box -->
+        <div class="dict-peek-box" aria-hidden="true">
+          <div class="dict-float" style="transform:rotate(-8deg);">
+            <svg width="70" height="80" viewBox="0 0 150 160" aria-hidden="true" style="opacity:.7;">
+              <polygon points="75,35 120,55 110,110 40,110 30,55" fill="var(--dict)" stroke="var(--border)" stroke-width="4"/>
+              <polygon points="45,38 55,15 65,30 75,8 85,30 95,15 105,38" fill="#ffd54f" stroke="var(--border)" stroke-width="3"/>
+              <circle cx="60" cy="65" r="13" fill="#fff" stroke="var(--border)" stroke-width="3"/>
+              <circle cx="60" cy="65" r="6" fill="var(--border)"/>
+              <ellipse cx="92" cy="65" rx="10" ry="8" fill="var(--border)"/>
+              <text x="120" y="30" font-size="28" font-weight="900" fill="var(--border)">!</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conditions overview -->
+  <section class="screen" id="screen-gs-conditions">
+    <div class="stage">
+      <div class="stack" style="gap:14px;">
+        <div class="card pad float" style="width:min(700px,95vw); text-align:center;">
+          <div class="title-md">شروط یک انتخابات عقلانی و منصفانه</div>
+          <p class="muted" style="margin-top:10px;">
+            بیایید قوانینی بگذاریم که هر مکانیزم رای‌گیری خوبی باید آن‌ها را رعایت کند.
+          </p>
+          <div class="cond-summary" style="margin-top:16px;">
+            <div class="cond-badge">شرط ۱: اتفاق آرا</div>
+            <div class="cond-badge">شرط ۲: رای صادقانه</div>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:center;" id="machineDisplay"></div>
+        <!-- Mod 9: Floating characters below machine -->
+        <div style="display:flex; gap:18px; justify-content:center; align-items:center; margin-top:6px;">
+          <div class="float fast" style="animation-delay:.1s;">
+            <svg width="40" height="40" viewBox="0 0 120 120"><path d="M60 10 L108 102 L12 102 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="4"/></svg>
+          </div>
+          <div class="float" style="animation-delay:.3s;">
+            <svg width="40" height="40" viewBox="0 0 120 120"><circle cx="60" cy="60" r="45" fill="var(--cir)" stroke="var(--border)" stroke-width="4"/></svg>
+          </div>
+          <div class="float slow" style="animation-delay:.5s;">
+            <svg width="40" height="40" viewBox="0 0 120 120"><rect x="26" y="26" width="68" height="68" fill="var(--sq)" stroke="var(--border)" stroke-width="4"/></svg>
+          </div>
+          <div class="dict-float" style="animation-delay:.7s;">
+            <svg width="40" height="45" viewBox="0 0 150 160"><polygon points="75,35 120,55 110,110 40,110 30,55" fill="var(--dict)" stroke="var(--border)" stroke-width="4"/><polygon points="45,38 55,15 65,30 75,8 85,30 95,15 105,38" fill="#ffd54f" stroke="var(--border)" stroke-width="3"/></svg>
+          </div>
+        </div>
+        <div style="margin-top:8px;">
+          <button class="btn" id="btnGsCond1">شروع با شرط اول</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condition 1: Unanimity -->
+  <section class="screen" id="screen-gs-cond1">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <div class="cond-badge" style="margin-bottom:12px;">شرط ۱: اتفاق آرا (Unanimity)</div>
+        <!-- Mod 10: Creative SVG element -->
+        <div style="display:flex; justify-content:center; margin-bottom:10px;">
+          <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="25" fill="#fff9c4" stroke="var(--border)" stroke-width="3"/>
+            <path d="M18 30 L26 38 L42 22" fill="none" stroke="var(--border)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="title-md" style="font-size:22px; margin-top:8px;">
+          اگر تمام افراد جامعه، A را اولویت اولشان قرار دهند، A باید برنده انتخابات شود.
+        </div>
+        <p class="muted" style="margin-top:12px;">
+          خیلی منطقی و بدیهی است، نه؟ حداقل چیزی است که از یک مکانیزم خوب انتظار داریم.
+          اگر همه جامعه یکصدا یک کاندید را صدا بزنند، مکانیزم ما هم باید او را انتخاب کند.
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnGsCond1Example">بیایید با یک مثال ببینیم</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condition 1: Ballots example -->
+  <section class="screen" id="screen-gs-cond1-ballots">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float" style="margin-bottom:8px;">
+        <div class="cond-badge" style="margin-bottom:8px;">شرط ۱: اتفاق آرا</div>
+        <p class="muted">سه برگه رای با ۴ کاندیدا. توجه کنید: انتخاب اول همه یکسان است!</p>
+      </div>
+      <div class="ballots-row" id="cond1BallotsContainer"></div>
+      <div style="margin-top:12px; text-align:center;">
+        <button class="btn" id="btnCond1Run">اجرای مکانیزم «نگاه به اولویت دوم»</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condition 1: Ballots highlighted -->
+  <section class="screen" id="screen-gs-cond1-result">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float" style="margin-bottom:8px;">
+        <div class="cond-badge" style="margin-bottom:8px;">شرط ۱: نقض شد!</div>
+        <p class="muted">اولویت دوم هر برگه رای هایلایت شده است.</p>
+      </div>
+      <div class="ballots-row" id="cond1ResultBallots" style="margin-bottom:12px;"></div>
+      <div style="margin-top:8px; text-align:center;">
+        <button class="btn" id="btnCond1Machine">خروجی ماشین رای‌گیری را ببینید</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 11: Condition 1: Machine output - separate machine display and explanation -->
+  <section class="screen" id="screen-gs-cond1-machine">
+    <div class="stage">
+      <div class="stack" style="gap:10px;">
+        <div id="cond1MachineDisplay" style="display:flex; justify-content:center;"></div>
+        <div class="card pad float" style="width:min(600px,95vw); text-align:center;" id="cond1MachineOutput"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plurality voting -->
+  <section class="screen" id="screen-gs-plurality">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <!-- Mod 12: Colored dots + election SVG -->
+        <div style="display:flex; gap:8px; justify-content:center; margin-bottom:10px;">
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--tri)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--cir)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--sq)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--dict)" stroke="var(--border)" stroke-width="1.5"/></svg>
+        </div>
+        <div style="display:flex; justify-content:center; margin-bottom:12px;">
+          <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+            <rect x="8" y="8" width="44" height="44" rx="8" fill="#e3f2fd" stroke="var(--border)" stroke-width="3"/>
+            <text x="30" y="26" text-anchor="middle" font-size="10" font-weight="700" fill="var(--border)">۱</text>
+            <line x1="16" y1="32" x2="44" y2="32" stroke="var(--border)" stroke-width="2" opacity=".3"/>
+            <text x="30" y="44" text-anchor="middle" font-size="8" fill="var(--border)" opacity=".4">۲  ۳  ۴</text>
+          </svg>
+        </div>
+        <div class="title-md" style="font-size:22px;">مکانیزم ۱: رای‌گیری مرسوم (Plurality)</div>
+        <p class="muted" style="margin-top:10px;">
+          فقط به انتخاب اول هر برگه رای نگاه می‌کنیم و جمع می‌زنیم. هر کس بیشترین رای اول را داشت، برنده است.
+        </p>
+        <p class="muted" style="margin-top:6px;">
+          همان سیستمی که در انتخابات ریاست جمهوری و اکثر انتخابات دنیا استفاده می‌شود. احتمالا شما هم تا حالا با این روش رای داده‌اید.
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnPluralityExample">مثال با برگه رای‌ها</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plurality example: ballots -->
+  <section class="screen" id="screen-gs-plurality-ex">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float" style="margin-bottom:8px;">
+        <div class="title-md" style="font-size:20px;">رای‌گیری مرسوم (Plurality)</div>
+        <p class="muted">فقط انتخاب اول هر فرد شمرده می‌شود (سبز رنگ).</p>
+      </div>
+      <div class="ballots-row" id="pluralityBallots" style="margin-bottom:12px;"></div>
+      <div style="margin-top:8px; text-align:center;">
+        <button class="btn" id="btnPluralityRun">شمارش آرا</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plurality result -->
+  <section class="screen" id="screen-gs-plurality-result">
+    <div class="stage">
+      <div class="card gs-center-card float" id="pluralityResult"></div>
+    </div>
+  </section>
+
+  <!-- Borda count -->
+  <section class="screen" id="screen-gs-borda">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <!-- Mod 14: Colored dots above box -->
+        <div style="display:flex; gap:8px; justify-content:center; margin-bottom:10px;">
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--tri)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--cir)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--sq)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="var(--dict)" stroke="var(--border)" stroke-width="1.5"/></svg>
+        </div>
+        <div style="display:flex; justify-content:center; margin-bottom:12px;">
+          <!-- Mod 14: Redesigned Borda icon -->
+          <svg width="86" height="86" viewBox="0 0 86 86" aria-hidden="true">
+            <rect x="10" y="10" width="66" height="66" rx="12" fill="#f3e5f5" stroke="var(--border)" stroke-width="3"/>
+            <rect x="16" y="18" width="24" height="12" rx="5" fill="#fff" stroke="var(--border)" stroke-width="1.5"/>
+            <text x="28" y="27" text-anchor="middle" font-size="9" font-weight="900" fill="var(--border)">1pt</text>
+            <rect x="44" y="20" width="24" height="8" rx="3" fill="var(--tri)" stroke="var(--border)" stroke-width="1.2"/>
+
+            <rect x="16" y="44" width="24" height="12" rx="5" fill="#fff" stroke="var(--border)" stroke-width="1.5"/>
+            <text x="28" y="53" text-anchor="middle" font-size="9" font-weight="900" fill="var(--border)">2pt</text>
+            <rect x="44" y="46" width="18" height="8" rx="3" fill="var(--cir)" stroke="var(--border)" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="title-md" style="font-size:22px;">مکانیزم ۲: جمع امتیازها (Borda Count)</div>
+        <p class="muted" style="margin-top:10px;">
+          به هر اولویت یک امتیاز می‌دهیم: انتخاب اول = ۱، دوم = ۲، سوم = ۳، چهارم = ۴.
+          امتیازات هر کاندیدا را جمع می‌زنیم. کمترین مجموع برنده است.
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          مزیت: میانگین بهتری از نظر جامعه ارائه می‌دهد. اگر کسی بین عده‌ای خیلی محبوب و عده‌ای منفور باشد،
+          مکانیزم قبلی ممکن است او را انتخاب کند ولی این روش اولویت‌های همه را در نظر می‌گیرد.
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnBordaExample">مثال با برگه رای‌ها</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Borda example: ballots -->
+  <section class="screen" id="screen-gs-borda-ex">
+    <div class="stage" style="flex-direction:column; justify-content:flex-start;">
+      <div class="card header-card float" style="margin-bottom:8px;">
+        <div class="title-md" style="font-size:20px;">جمع امتیازها (Borda Count)</div>
+        <p class="muted">هر اولویت امتیاز دارد. کمترین جمع برنده است.</p>
+      </div>
+      <div class="ballots-row" id="bordaBallots" style="margin-bottom:12px;"></div>
+      <div style="margin-top:8px; text-align:center;">
+        <button class="btn" id="btnBordaRun">محاسبه امتیازات</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Borda result -->
+  <section class="screen" id="screen-gs-borda-result">
+    <div class="stage">
+      <div class="card gs-center-card float" id="bordaResult"></div>
+    </div>
+  </section>
+
+  <!-- Mod 16: Both mechanisms pass condition 1 - floating characters added -->
+  <section class="screen" id="screen-gs-both-pass">
+    <div class="bg-drift" aria-hidden="true">
+      <div class="blob" style="left:10%;top:15%;animation-duration:11s;--dx:25px;--dy:-15px;"><div class="spin"><svg width="80" height="80" viewBox="0 0 120 120"><path d="M60 10 L108 102 L12 102 Z" fill="var(--tri)" stroke="var(--border)" stroke-width="4"/></svg></div></div>
+      <div class="blob" style="right:12%;top:20%;animation-duration:13s;--dx:-20px;--dy:18px;"><div class="spin"><svg width="80" height="80" viewBox="0 0 120 120"><circle cx="60" cy="60" r="45" fill="var(--cir)" stroke="var(--border)" stroke-width="4"/></svg></div></div>
+      <div class="blob" style="left:15%;bottom:20%;width:70px;animation-duration:12s;--dx:18px;--dy:22px;"><div class="spin"><svg width="70" height="70" viewBox="0 0 120 120"><rect x="26" y="26" width="68" height="68" fill="var(--sq)" stroke="var(--border)" stroke-width="4"/></svg></div></div>
+    </div>
+    <div class="stage">
+      <div class="card gs-center-card float">
+        <!-- Mod 16: Colored dots -->
+        <div style="display:flex; gap:8px; margin-bottom:14px;">
+          <svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="var(--tri)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="var(--cir)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="var(--sq)" stroke="var(--border)" stroke-width="1.5"/></svg>
+          <svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="var(--dict)" stroke="var(--border)" stroke-width="1.5"/></svg>
+        </div>
+        <div class="cond-badge done" style="margin-bottom:14px;">شرط ۱: اتفاق آرا - برآورده شد!</div>
+        <div class="title-md" style="font-size:22px;">هر دو مکانیزم شرط اول را برآورده می‌کنند.</div>
+        <p class="muted" style="margin-top:10px;">
+          هم رای‌گیری مرسوم (Plurality) و هم جمع امتیازها (Borda) وقتی همه یکصدا هستند، نتیجه درست می‌دهند.
+          به نظر می‌رسد هر دو مکانیزم خوب و دموکراتیکی هستند.
+        </p>
+        <div style="display:flex; gap:12px; justify-content:center; align-items:center; margin-top:14px;">
+          <div><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c8e6c9" stroke="var(--border)" stroke-width="2"/><path d="M7 12 L10.5 15.5 L17 9" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-weight:800;">Plurality</span>
+          <div><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c8e6c9" stroke="var(--border)" stroke-width="2"/><path d="M7 12 L10.5 15.5 L17 9" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-weight:800;">Borda</span>
+        </div>
+        <div style="margin-top:18px;">
+          <button class="btn" id="btnGoCond2">اما بیایید سراغ شرط دوم برویم. شاید نظرتان عوض شد!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 17: Condition 2: Truthfulness - with masked characters -->
+  <section class="screen" id="screen-gs-cond2">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <!-- Mod 17: Theater mask characters -->
+        <div style="display:flex; justify-content:center; gap:16px; margin-bottom:12px;">
+          <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true">
+            <circle cx="25" cy="25" r="22" fill="#fff9c4" stroke="var(--border)" stroke-width="2.5"/>
+            <circle cx="18" cy="20" r="3" fill="var(--border)"/>
+            <circle cx="32" cy="20" r="3" fill="var(--border)"/>
+            <path d="M16 32 Q25 40 34 32" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true" style="transform:rotate(5deg);">
+            <circle cx="25" cy="25" r="22" fill="#e3f2fd" stroke="var(--border)" stroke-width="2.5"/>
+            <circle cx="18" cy="20" r="3" fill="var(--border)"/>
+            <circle cx="32" cy="20" r="3" fill="var(--border)"/>
+            <path d="M16 34 Q25 28 34 34" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Mask being pulled aside -->
+            <path d="M38 12 L44 6" stroke="var(--border)" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <div class="cond-summary" style="margin-bottom:12px;">
+          <div class="cond-badge done">شرط ۱: اتفاق آرا</div>
+          <div class="cond-badge">شرط ۲: رای صادقانه</div>
+        </div>
+        <div class="title-md" style="font-size:22px;">
+          شرط ۲: رای صادقانه (بدون تاکتیک)
+        </div>
+        <p style="font-weight:800; margin-top:8px;">
+          کسی مجبور نباشد برای برنده شدن دروغ بگوید.
+        </p>
+        <div style="margin-top:12px;">
+          <span class="info-toggle" id="cond2InfoToggle">+</span>
+          <span class="muted">توضیحات آکادمیک بیشتر</span>
+        </div>
+        <div class="info-box" id="cond2InfoBox">
+          <p>
+            در واقع توضیح دقیق‌تر این شرط این است که اگر مکانیزم ما یک گزینه را انتخاب کرد، و بار دیگر رای‌گیری کردیم و نظر هیچ‌کس در جامعه نسبت به آن گزینه بدتر نشد، باز هم مکانیزم همان گزینه را انتخاب کند.
+          </p>
+          <p style="margin-top:6px;">
+            منطقی است، نه؟ طبیعتا اگر مکانیزم خوبی باشد، با بهتر شدن نظر همه نسبت به کاندیدای برنده، باز هم باید او را برنده اعلام کند!
+          </p>
+          <p style="margin-top:6px;">
+            به این خاصیت <strong>یکنوایی (Monotonicity)</strong> می‌گوییم. این خاصیت در نظریه بازی معادل با <strong>راستگویی (Truthfulness / Strategy-proofness)</strong> است و برای همین برای ما اهمیت دارد.
+          </p>
+        </div>
+        <p class="muted" style="margin-top:12px;">
+          یعنی شرایطی پیش نیاید که کسی تشویق شود دروغ بگوید.
+          برای آشنایی بهتر با این مفهوم، بیایید یک بازی انجام دهیم!
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnGsPoliceIntro">بازی ایستگاه پلیس</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 18: Police station intro -->
+  <section class="screen" id="screen-gs-police-intro">
+    <div class="stage police-stage">
+      <div class="card mini-cand police-cand-intro float fast" id="policeNewCharCard"></div>
+      <div class="card gs-center-card float police-card-main" style="position:relative; margin-top:8px;">
+        <div class="police-peek" id="policePeekIntro" aria-hidden="true"></div>
+        <div style="display:flex; justify-content:center; margin-bottom:14px;" id="policeCharFloat"></div>
+        <div class="title-md" style="font-size:22px;">بازی ایستگاه پلیس</div>
+        <p class="muted" style="margin-top:10px;">
+          پلیس می‌خواهد در کوچه شما پاسگاه بسازد. ۵ خانه در این کوچه وجود دارد.
+          هر کس می‌خواهد پاسگاه نزدیک خانه خودش باشد.
+        </p>
+        <p class="muted" style="margin-top:6px;">
+          دو مکانیزم برای تعیین محل پاسگاه داریم: <strong>میانگین</strong> و <strong>میانه</strong>.
+          کدام یک در برابر دروغ‌گویی مقاوم‌تر است؟
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnStartPolice">شروع بازی</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 18: Police Mean Game -->
+  <section class="screen" id="screen-gs-police-mean">
+    <div class="stage">
+      <div class="card gs-wide-card float police-card-main" style="position:relative; margin-top:8px;">
+        <div class="police-peek" id="policePeekMean" aria-hidden="true"></div>
+        <div class="title-md" style="font-size:20px;">مکانیزم میانگین</div>
+        <p class="muted" style="margin-top:6px;">
+          فرض کنید چهار همسایه دیگر صادقانه خانه خود را اعلام کردند. به نظرتان اگر شما راجع به مکان خانه‌تان راست نگویید و اغراق شده خانه را در ته کوچه اعلام کنید چه می‌شود؟ خانه را به راست بکشید تا ببینید.
+        </p>
+        <div class="road-container">
+          <div class="road" id="meanRoad">
+            <div class="house-icon" data-pos="35" style="left:35%;">
+              <div class="house-num">۱</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="40" style="left:40%;">
+              <div class="house-num">۲</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="47" style="left:47%;">
+              <div class="house-num">۳</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="53" style="left:53%;">
+              <div class="house-num">۴</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon draggable you-house" id="h5-mean" data-pos="60" style="left:60%;">
+              <div class="house-num">شما</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#e3f2fd" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="police-icon" id="police-mean" style="left:47%;">
+              <svg width="50" height="40" viewBox="0 0 60 50"><rect x="5" y="20" width="50" height="20" rx="6" fill="#1e88e5" stroke="var(--border)" stroke-width="2"/><rect x="12" y="10" width="36" height="16" rx="4" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="24" y="5" width="12" height="8" rx="3" fill="#e53935" stroke="var(--border)" stroke-width="2"><animate attributeName="fill" values="#e53935;#1e88e5;#e53935" dur="1s" repeatCount="indefinite"/></rect><circle cx="18" cy="40" r="5" fill="var(--border)"/><circle cx="42" cy="40" r="5" fill="var(--border)"/></svg>
+            </div>
+          </div>
+        </div>
+        <div id="meanFeedback" class="hidden" style="margin-top:12px;">
+          <div class="card pad" style="text-align:center; background:#fff3e0; border-color:#ff9800;">
+            <p style="font-weight:800;">دیدید؟ پاسگاه به خانه واقعی شما نزدیکتر شد!</p>
+            <p class="muted" style="margin-top:4px;">
+              با دروغ گفتن درباره محل خانه‌تان، توانستید نتیجه را به نفع خودتان تغییر دهید. مکانیزم میانگین در برابر دروغ مقاوم نیست!
+            </p>
+            <div style="margin-top:12px;">
+              <button class="btn" id="btnToMedianMethod">اما اگر مکانیزم را عوض کنیم چه؟</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 18: Police Median Game -->
+  <section class="screen" id="screen-gs-police-median">
+    <div class="stage">
+      <div class="card gs-wide-card float police-card-main" style="position:relative; margin-top:8px;">
+        <div class="police-peek" id="policePeekMedian" aria-hidden="true"></div>
+        <div class="title-md" style="font-size:20px;">مکانیزم میانه</div>
+        <p class="muted" style="margin-top:6px;">
+          حالا به جای میانگین، از <strong>میانه</strong> (عدد وسطی) استفاده می‌کنیم.
+          دوباره خانه‌تان را به سمت راست بکشید و ببینید چه اتفاقی می‌افتد.
+        </p>
+        <div class="road-container">
+          <div class="road" id="medianRoad">
+            <div class="house-icon" data-pos="35" style="left:35%;">
+              <div class="house-num">۱</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="40" style="left:40%;">
+              <div class="house-num">۲</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="47" style="left:47%;">
+              <div class="house-num">۳</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon" data-pos="53" style="left:53%;">
+              <div class="house-num">۴</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="house-icon draggable you-house" id="h5-med" data-pos="60" style="left:60%;">
+              <div class="house-num">شما</div>
+              <svg width="36" height="36" viewBox="0 0 44 44"><polygon points="22,4 40,18 40,40 4,40 4,18" fill="#e3f2fd" stroke="var(--border)" stroke-width="2"/><rect x="16" y="26" width="12" height="14" fill="#fff" stroke="var(--border)" stroke-width="1.5"/></svg>
+            </div>
+            <div class="police-icon" id="police-med" style="left:47%;">
+              <svg width="50" height="40" viewBox="0 0 60 50"><rect x="5" y="20" width="50" height="20" rx="6" fill="#1e88e5" stroke="var(--border)" stroke-width="2"/><rect x="12" y="10" width="36" height="16" rx="4" fill="#fff" stroke="var(--border)" stroke-width="2"/><rect x="24" y="5" width="12" height="8" rx="3" fill="#e53935" stroke="var(--border)" stroke-width="2"><animate attributeName="fill" values="#e53935;#1e88e5;#e53935" dur="1s" repeatCount="indefinite"/></rect><circle cx="18" cy="40" r="5" fill="var(--border)"/><circle cx="42" cy="40" r="5" fill="var(--border)"/></svg>
+            </div>
+          </div>
+        </div>
+        <div id="medianFeedback" class="hidden" style="margin-top:12px;">
+          <div class="card pad" style="text-align:center; background:#e8f5e9; border-color:#4caf50;">
+            <p style="font-weight:800;">دیدید؟ پاسگاه تکان نخورد!</p>
+            <p class="muted" style="margin-top:4px;">
+              مکانیزم میانه در برابر دروغ مقاوم است. هر چقدر هم خانه‌تان را جابجا کنید، عدد وسطی تغییر نمی‌کند.
+            </p>
+          </div>
+        </div>
+        <div id="medianConnection" class="hidden" style="margin-top:10px;">
+          <div class="card pad" style="text-align:center; background:#f3e5f5; border-color:var(--dict);">
+            <p style="font-weight:800;">ارتباط با نظریه بازی:</p>
+            <p class="muted" style="margin-top:4px;">
+              در نظریه بازی، وقتی یک مکانیزم طوری باشد که <strong>بهترین استراتژی هر بازیکن گفتن حقیقت</strong> باشد، می‌گوییم آن مکانیزم <strong>Strategy-proof</strong> یا <strong>ضد تاکتیک</strong> است. میانه چنین خاصیتی دارد!
+            </p>
+            <div style="margin-top:12px;">
+              <button class="btn" id="btnPoliceLesson">بازگشت به رای‌گیری</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic voting intro -->
+  <section class="screen" id="screen-gs-strategic-intro">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <div class="cond-summary" style="margin-bottom:10px;">
+          <div class="cond-badge done">شرط ۱: اتفاق آرا</div>
+          <div class="cond-badge">شرط ۲: رای صادقانه</div>
+        </div>
+        <div class="title-md" style="font-size:22px;">حالا شما رای‌دهنده هستید!</div>
+        <p class="muted" style="margin-top:10px;">
+          بیایید ببینیم در رای‌گیری مرسوم (Plurality) آیا ممکن است تمایل داشته باشید سیستم را دور بزنید و دروغ بگویید؟
+        </p>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnStrategicStart">مشاهده نظرسنجی</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 19: Strategic poll - button moved down -->
+  <section class="screen" id="screen-gs-strategic-poll">
+    <div class="stage" style="flex-direction:column; gap:14px;">
+      <div class="card pad float" style="width:min(600px,95vw);" id="strategicPollContent"></div>
+      <div style="text-align:center; margin-top:8px;">
+        <button class="btn" id="btnStrategicChoice">چه می‌کنید؟</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic choice -->
+  <section class="screen" id="screen-gs-strategic-choice">
+    <div class="stage">
+      <div class="card pad float" style="width:min(650px,95vw);" id="strategicChoiceContent"></div>
+    </div>
+  </section>
+
+  <!-- Strategic result -->
+  <section class="screen" id="screen-gs-strategic-result">
+    <div class="stage">
+      <div class="card pad float" style="width:min(600px,95vw);" id="strategicResultContent"></div>
+    </div>
+  </section>
+
+  <!-- Borda problem (brief) -->
+  <section class="screen" id="screen-gs-borda-problem">
+    <div class="stage">
+      <div class="card gs-center-card float">
+        <div style="display:flex; justify-content:center; margin-bottom:12px;">
+          <svg width="60" height="60" viewBox="0 0 60 60" aria-hidden="true">
+            <rect x="8" y="8" width="44" height="44" rx="8" fill="#ffebee" stroke="var(--border)" stroke-width="3"/>
+            <path d="M20 20 L40 40 M40 20 L20 40" stroke="#c62828" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="title-md" style="font-size:22px;">مکانیزم جمع امتیازها (Borda) هم همین مشکل را دارد!</div>
+        <p class="muted" style="margin-top:10px;">
+          در روش Borda هم، رای‌دهندگان می‌توانند با تغییر ترتیب اولویت‌هایشان (مثلا قرار دادن رقیب اصلی در آخرین جایگاه) نتیجه را به نفع خود تغییر دهند.
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          پس هیچ‌کدام از این دو مکانیزم، شرط دوم (رای صادقانه) را تضمین نمی‌کنند.
+        </p>
+        <div style="display:flex; gap:12px; justify-content:center; align-items:center; margin-top:14px;">
+          <div><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ff8a80" stroke="var(--border)" stroke-width="2"/><path d="M8 8 L16 16 M16 8 L8 16" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <span style="font-weight:800;">Plurality</span>
+          <div><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ff8a80" stroke="var(--border)" stroke-width="2"/><path d="M8 8 L16 16 M16 8 L8 16" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <span style="font-weight:800;">Borda</span>
+        </div>
+        <div style="margin-top:18px;">
+          <button class="btn" id="btnBordaProblem">پس کدام مکانیزم هر دو شرط را برآورده می‌کند؟</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 20: Punchline - with dictator peeking -->
+  <section class="screen" id="screen-gs-punchline">
+    <div class="stage">
+      <div style="position:relative;">
+        <div class="card gs-center-card punch-shake" style="background:#f3e5f5; border-color:var(--dict);">
+          <div style="display:flex; justify-content:center; margin-bottom:14px;">
+            <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+              <circle cx="40" cy="40" r="35" fill="#fff" stroke="var(--border)" stroke-width="3"/>
+              <path d="M20 40 L35 55 L60 25" fill="none" stroke="#c62828" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="title-lg" style="color:#c62828;">شگفت‌انگیز!</div>
+          <p style="font-weight:900; font-size:20px; margin-top:12px;">
+            تنها سیستمی که هر دو شرط را برآورده می‌کند...
+          </p>
+          <p style="font-weight:900; font-size:26px; margin-top:10px; color:var(--dict);">
+            دیکتاتوری است!
+          </p>
+          <p class="muted" style="margin-top:12px;">
+            بله، درست خواندید. ریاضیات ثابت کرده که تنها مکانیزم رای‌گیری‌ای که هم «اتفاق آرا» و هم «رای صادقانه» را تضمین کند، سیستمی است که فقط یک نفر تصمیم بگیرد!
+          </p>
+          <div style="margin-top:18px;">
+            <button class="btn" id="btnPunchline">آقای دیکتاتور راست می‌گفت؟!</button>
+          </div>
+        </div>
+        <!-- Mod 20: Dictator peeking with evil smile -->
+        <div class="dict-peek-box" style="bottom:-20px; left:-40px;" aria-hidden="true">
+          <div class="dict-float" style="transform:rotate(-10deg);">
+            <svg width="80" height="90" viewBox="0 0 150 160" aria-hidden="true" style="opacity:.8;">
+              <polygon points="75,35 120,55 110,110 40,110 30,55" fill="var(--dict)" stroke="var(--border)" stroke-width="4"/>
+              <polygon points="45,38 55,15 65,30 75,8 85,30 95,15 105,38" fill="#ffd54f" stroke="var(--border)" stroke-width="3"/>
+              <circle cx="60" cy="65" r="13" fill="#fff" stroke="var(--border)" stroke-width="3"/>
+              <circle cx="60" cy="65" r="6" fill="var(--border)"/>
+              <ellipse cx="92" cy="65" rx="10" ry="8" fill="var(--border)"/>
+              <path d="M58 88 Q75 78 92 88" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M62 80 Q75 76 88 80" fill="var(--border)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dictator was right -->
+  <section class="screen" id="screen-gs-dictator-right">
+    <div class="stage">
+      <div class="layout-2col" style="align-items:center;">
+        <div class="card pad float slow" style="text-align:center;">
+          <div style="display:flex; justify-content:center; margin-bottom:12px;">
+            <div class="dict-float" id="dictRightCharacter"></div>
+          </div>
+          <div class="title-md" style="color:var(--dict); font-size:24px;">دیدید؟ گفتم!</div>
+          <p style="font-weight:800; margin-top:8px;">دموکراسی کار نمی‌کند!</p>
+          <p class="muted" style="margin-top:8px; font-style:italic;">
+            - آقای دیکتاتور
+          </p>
+        </div>
+        <div class="card pad float fast">
+          <div class="title-md" style="font-size:20px;">اما صبر کنید...</div>
+          <p class="muted" style="margin-top:8px;">
+            این به معنای آن نیست که دموکراسی بد است. بلکه یعنی هیچ سیستم رای‌گیری‌ای کامل نیست.
+            این قضیه ریاضی، محدودیت‌های ذاتی هر مکانیزم تصمیم‌گیری جمعی را نشان می‌دهد.
+          </p>
+          <p class="muted" style="margin-top:8px;">
+            بیایید این قضیه مهم را رسمی‌تر بشناسیم.
+          </p>
+          <div style="margin-top:16px;">
+            <button class="btn" id="btnDictRight">قضیه گیبارد-سترویت</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theorem -->
+  <section class="screen" id="screen-gs-theorem">
+    <div class="stage">
+      <div class="card gs-wide-card float">
+        <div style="display:flex; justify-content:center; margin-bottom:14px;">
+          <svg width="70" height="70" viewBox="0 0 70 70" aria-hidden="true">
+            <rect x="8" y="8" width="54" height="54" rx="8" fill="#f3e5f5" stroke="var(--border)" stroke-width="3"/>
+            <text x="35" y="28" text-anchor="middle" font-size="11" font-weight="900" fill="var(--border)">G-S</text>
+            <line x1="16" y1="34" x2="54" y2="34" stroke="var(--border)" stroke-width="2"/>
+            <text x="35" y="48" text-anchor="middle" font-size="9" font-weight="700" fill="var(--border)">Theorem</text>
+          </svg>
+        </div>
+        <div class="title-md">قضیه گیبارد-سترویت</div>
+        <div class="theorem-box" style="position:relative;">
+          <div class="box-corner-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="theorem-title theorem-title-center">Gibbard-Satterthwaite Theorem</div>
+          <p>
+            در هر سیستم رای‌گیری با بیش از ۲ کاندیدا، اگر بخواهیم:
+          </p>
+          <div style="margin-top:10px;">
+            <div style="display:flex; align-items:center; gap:8px; margin:6px 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c8e6c9" stroke="var(--border)" stroke-width="2"/><path d="M7 12 L10.5 15.5 L17 9" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>دیکتاتوری نباشد (هیچ فرد واحدی تعیین‌کننده نباشد)</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; margin:6px 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c8e6c9" stroke="var(--border)" stroke-width="2"/><path d="M7 12 L10.5 15.5 L17 9" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>شرط یک‌صدایی Unanimity (Pareto)</span>
+            </div>
+          </div>
+          <p style="margin-top:10px; font-weight:800; color:#c62828;">
+            آنگاه باید با رای‌گیری استراتژیک کنار بیایید!
+            همیشه شرایطی وجود دارد که رای‌دهندگان تشویق شوند دروغ بگویند.
+          </p>
+        </div>
+        <div style="margin-top:16px;">
+          <button class="btn" id="btnTheorem">نتیجه‌گیری نهایی</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 21: Conclusion - with floating characters container -->
+  <section class="screen" id="screen-gs-conclusion">
+    <div class="bg-drift" id="conclusionChars" aria-hidden="true"></div>
+    <div class="stage">
+      <div class="card gs-center-card float conclusion-card">
+        <div class="conclusion-top-float in-card" id="conclusionTopChars" aria-hidden="true"></div>
+        <div class="title-md" style="margin-top:16px;">دموکراسی کامل و بی‌نقص یک رویاست!</div>
+        <p class="muted" style="margin-top:10px;">
+          اما این به معنای ناامیدی نیست. دموکراسی با همه محدودیت‌هایش، هنوز بهترین سیستمی است که بشر برای تصمیم‌گیری جمعی یافته.
+        </p>
+        <p class="muted" style="margin-top:8px;">
+          این قضیه محدودیت‌های بنیادین طراحی نهادها را روشن می‌کند و نشان می‌دهد چرا در دنیای واقعی، سیاست‌گذاری و طراحی مکانیزم تصمیم‌گیری جمعی همیشه با بده‌بستان (trade-off) همراه است.
+        </p>
+        <p class="muted" style="margin-top:8px; font-weight:700;">
+          باید واقع‌بین باشیم: هیچ سیستم رای‌گیری‌ای وجود ندارد که همزمان عادلانه، صادقانه و غیردیکتاتوری باشد.
+        </p>
+        <div class="doodle" style="margin-top:14px; transform:rotate(-3deg);">ریاضیات می‌گوید هیچ سیستم  رای‌گیری بدون نقصی وجود ندارد.</div>
+        <div style="margin-top:18px;">
+          <button class="btn" id="btnToFinal">پایان</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mod 22: Final/Credits Page -->
+  <section class="screen" id="screen-final">
+    <div class="stage">
+      <div class="stack final-stack" style="gap:14px;">
+        <div class="final-top-chars" aria-hidden="true">
+          <div class="final-head-wrap float" id="finalCharOne"></div>
+          <div class="final-head-wrap float slow" id="finalCharTwo"></div>
+        </div>
+
+        <div class="card pad final-main-card" style="width:min(760px,95vw); text-align:center;">
+          <div class="muted">علی جوادی یگانه / علی اصفهانی</div>
+          <div style="margin-top:12px; display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap;">
+            <!-- Telegram -->
+            <a href="https://t.me/ali_javadi" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L1 11l7 3 3 7 4-5 6 3z"/></svg>
+              Telegram
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/JavazAli/Social-Chioce/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <!-- Email -->
+            <a href="mailto:ali.javadi.yeganeh@gmail.com" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+              Email
+            </a>
+          </div>
+          <div class="doodle" style="margin-top:14px;">
+            با الهام از کارهای <a href="https://ncase.me" target="_blank" rel="noopener" style="color:var(--border);">nicky case</a>
+          </div>
+          <div class="doodle" style="margin-top:6px; font-size:18px;">
+            ساخته شده در دانشگاه صنعتی شریف
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:center; margin-top:4px;">
+          <button class="btn" id="btnRestartFresh">شروع مجدد</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- DOCK & MODALS                 -->
+  <!-- ============================= -->
+
+  <div class="dock hidden" id="dock">
+    <div class="left">
+      <button class="dock-btn" id="btnSound" aria-label="موسیقی">
+        <!-- Mod 3: Waveform SVG icon for dock -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2.5" stroke-linecap="round">
+          <g id="waves">
+            <line x1="4" y1="8" x2="4" y2="16"/>
+            <line x1="8" y1="5" x2="8" y2="19"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+            <line x1="16" y1="5" x2="16" y2="19"/>
+            <line x1="20" y1="8" x2="20" y2="16"/>
+          </g>
+          <line x1="2" y1="2" x2="22" y2="22" id="muteX" style="display:none" stroke="var(--border)" stroke-width="2.5"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mid">
+      <!-- Mod 23: Reduced navigation dots to ~11 -->
+      <div class="dots" id="dots">
+        <div class="dot active" data-target="screen-cover" data-title="شروع"></div>
+        <div class="dot" data-target="screen-intro" data-title="سرزمین دموکراسی!"></div>
+        <div class="dot" data-target="screen-vote" data-title="برگه رای شما"></div>
+        <div class="dot" data-target="screen-cond1" data-title="پارادوکس کندورسه"></div>
+        <div class="dot" data-target="screen-gs-intro" data-title="طراحی یک انتخابات خوب!"></div>
+        <div class="dot" data-target="screen-gs-machine-intro" data-title="ماشین رای گیری"></div>
+        <div class="dot" data-target="screen-gs-cond1" data-title="شرط اول: اتفاق آرا!"></div>
+        <div class="dot" data-target="screen-gs-cond2" data-title="شرط دوم: راستگویی"></div>
+        <div class="dot" data-target="screen-gs-police-intro" data-title="بازی پلیس"></div>
+        <div class="dot" data-target="screen-gs-punchline" data-title="نتیجه"></div>
+        <div class="dot" data-target="screen-gs-conclusion" data-title="پایان"></div>
+      </div>
+    </div>
+    <div class="right">
+      <button class="dock-btn" id="btnContact" aria-label="ارتباط با ما">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16v16H4z"/>
+          <path d="M4 6l8 6 8-6"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="card modal-card final-contact-modal">
+      <button class="closex" id="closeModal" aria-label="بستن">&#10005;</button>
+
+      <div class="final-top-chars modal-heads" aria-hidden="true">
+        <div class="final-head-wrap" id="modalCharOne"></div>
+        <div class="final-head-wrap" id="modalCharTwo"></div>
+      </div>
+
+      <div class="muted" style="margin-top:8px;">علی جوادی یگانه / علی اصفهانی</div>
+
+      <div style="margin-top:12px; display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap;">
+        <a href="https://t.me/ali_javadi" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L1 11l7 3 3 7 4-5 6 3z"/></svg>
+          Telegram
+        </a>
+        <a href="https://github.com/JavazAli/Social-Chioce/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:ali.javadi.yeganeh@gmail.com" style="display:flex; align-items:center; gap:6px; color:var(--border); text-decoration:none; font-weight:700;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--border)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+          Email
+        </a>
+      </div>
+
+      <div class="doodle" style="margin-top:14px;">
+        با الهام از کارهای <a href="https://ncase.me" target="_blank" rel="noopener" style="color:var(--border);">nicky case</a>
+      </div>
+      <div class="doodle" style="margin-top:6px; font-size:18px;">
+        ساخته شده در دانشگاه صنعتی شریف
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop preload="auto" autoplay>
+    <source src="music.mp3" type="audio/mpeg"/>
+  </audio>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/svg-components.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/condorcet.js"></script>
+  <script src="js/gibbard.js"></script>
+
+</body>
+</html>
